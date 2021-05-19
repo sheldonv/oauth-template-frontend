@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext} from 'react'
 import { myContext } from '../../Context'
 import { IUser } from '../../types/mainTypes'
  
