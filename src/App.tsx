@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react'
+import { BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom'
+import Context, {myContext} from './Context';
+import HomePage from './components/HomePage/HomePage'
+import LoginPage from './components/LoginPage/LoginPage';
+import NavBar from './components/NavBar/NavBar';
+import  './GlobalStyles.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const userObject = useContext(myContext)
+    console.log(userObject)
+    return (
+        <div>
+            <Router>
+                <NavBar />  
+                <Switch>
+                    <Route path="/" component={HomePage} exact />
+                    {!userObject && <Route path="/login" component={LoginPage} exact />}
+                    <Redirect to="/"/>
+                </Switch>
+                
+            </Router>
+        </div>
+    )
 }
 
-export default App;
+export default App
