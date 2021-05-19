@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom'
-import Context, {myContext} from './Context';
+import {myContext} from './Context';
 import HomePage from './components/HomePage/HomePage'
 import LoginPage from './components/LoginPage/LoginPage';
 import NavBar from './components/NavBar/NavBar';
