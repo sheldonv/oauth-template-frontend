@@ -1,4 +1,4 @@
-import react, {useContext} from 'react';
+import React, {useContext} from 'react';
 import ReactDom from 'react-dom'
 import App from './App';
 import Context from './Context'
