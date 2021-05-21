@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react'
 import axios from 'axios'
 import Coin from '../Coin/Coin';
-import { Grid, useMediaQuery} from '@material-ui/core';
+import { Grid} from '@material-ui/core';
 import { myContext } from '../../Context'
 import { IUser } from '../../types/mainTypes'
  
