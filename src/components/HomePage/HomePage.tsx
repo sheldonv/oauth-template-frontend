@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react'
 import axios from 'axios'
 import Coin from '../Coin/Coin';
-import {Container, Grid, useMediaQuery} from '@material-ui/core';
+import { Grid, useMediaQuery} from '@material-ui/core';
 import { myContext } from '../../Context'
 import { IUser } from '../../types/mainTypes'
  
@@ -9,7 +9,6 @@ import { IUser } from '../../types/mainTypes'
 const HomePage = (props: any) => {
     const context = useContext(myContext) as IUser;
     const [coins, setCoins] = useState() as any
-    const isSmall = useMediaQuery("(max-width: 600px)");
     useEffect(() => {
         axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false').then((response) => {
             console.log(response.data)
