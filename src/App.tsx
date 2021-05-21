@@ -5,13 +5,14 @@ import HomePage from './components/HomePage/HomePage'
 import LoginPage from './components/LoginPage/LoginPage';
 import NavBar from './components/NavBar/NavBar';
 import  './GlobalStyles.css'
-
+import {CssBaseline} from '@material-ui/core'
 const App = () => {
     const userObject = useContext(myContext)
     console.log(userObject)
     return (
         <div>
             <Router>
+                <CssBaseline />
                 <NavBar />  
                 <Switch>
                     <Route path="/" component={HomePage} exact />

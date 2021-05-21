@@ -113,7 +113,8 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
 
-      
+        
+
     </div>
 
         /*<div className={Styles.navBarWrapper}>
