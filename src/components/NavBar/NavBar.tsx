@@ -58,7 +58,7 @@ const NavBar = () => {
             News
           </Typography>
           {!userObject &&<Button component={Link} to="/login" color="inherit" >Login</Button>}
-          {userObject && <Button color="inherit">Logout</Button>}
+          {userObject && <Button onClick={logout} color="inherit">Logout</Button>}
         </Toolbar>
       </AppBar>
     </div>
